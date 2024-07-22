@@ -1,0 +1,309 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: azure;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://images.unsplash.com/photo-1611832822637-0d6246524c50?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover; /* Menutupi seluruh area body */
+  background-position: center center; /* Posisi gambar di tengah-tengah */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.greetings {
+  font-size: 6rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 20px; /* Tambahkan margin atas untuk menjaga jarak dari atas */
+}
+
+.greetings > span {
+  animation: glow 2.5s ease-in-out infinite;
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+}
+
+.greetings > span:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #39c6d6;
+  z-index: -1;
+  overflow: hidden;
+  animation: flicker 2s infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+  }
+  10%,
+  90% {
+    color: #111;
+    text-shadow: none;
+  }
+}
+
+.greetings > span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.greetings > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.greetings > span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+.greetings > span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+.greetings > span:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.greetings > span:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+.greetings > span:nth-child(8) {
+  animation-delay: 1.4s;
+}
+
+.greetings > span:nth-child(9) {
+  animation-delay: 1.6s;
+}
+
+.greetings > span:nth-child(10) {
+  animation-delay: 1.8s;
+}
+
+.greetings > span:nth-child(11) {
+  animation-delay: 2s;
+}
+
+.greetings > span:nth-child(12) {
+  animation-delay: 2.2s;
+}
+
+.greetings > span:nth-child(13) {
+  animation-delay: 2.4s;
+}
+
+.greetings > span:nth-child(14) {
+  animation-delay: 2.6s;
+}
+
+.greetings > span:nth-child(15) {
+  animation-delay: 2.8s;
+}
+
+.greetings > span:nth-child(16) {
+  animation-delay: 3s;
+}
+
+.greetings > span:nth-child(17) {
+  animation-delay: 3.2s;
+}
+
+.greetings > span:nth-child(18) {
+  animation-delay: 3.4s;
+}
+
+.greetings > span:nth-child(19) {
+  animation-delay: 3.6s;
+}
+
+.greetings > span:nth-child(20) {
+  animation-delay: 3.8s;
+}
+
+.greetings > span:nth-child(21) {
+  animation-delay: 4s;
+}
+
+.greetings > span:nth-child(22) {
+  animation-delay: 4.2s;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+}
+
+.vienna {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.vienna > span {
+  animation: glow 2.5s ease-in-out infinite;
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+}
+
+.vienna > span:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #39c6d6;
+  z-index: -1;
+  overflow: hidden;
+  animation: flicker 2s infinite;
+}
+
+.vienna > span:nth-child(1) {
+  animation-delay: 3.2s; /* Mulai animasi setelah span ke-16 dari greetings */
+}
+
+.vienna > span:nth-child(2) {
+  animation-delay: 3.4s;
+}
+
+.vienna > span:nth-child(3) {
+  animation-delay: 3.6s;
+}
+
+.vienna > span:nth-child(4) {
+  animation-delay: 3.8s;
+}
+
+.vienna > span:nth-child(5) {
+  animation-delay: 4s;
+}
+
+.vienna > span:nth-child(6) {
+  animation-delay: 4.2s;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+
+.button {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 4s ease-in-out forwards;
+}
+
+.button button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  background-color: #39c6d6;
+  color: #111;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.button button:hover {
+  background-color: #28a7b8;
+  transform: scale(1.05);
+}
+
+.button a {
+  text-decoration: none;
+  color: #111;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .greetings {
+    font-size: 5rem; /* Ukuran font untuk layar tablet */
+  }
+
+  .vienna {
+    font-size: 2.5rem; /* Ukuran font untuk layar tablet */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .greetings {
+    font-size: 4rem; /* Ukuran font untuk layar ponsel */
+  }
+
+  .vienna {
+    font-size: 2rem; /* Ukuran font untuk layar ponsel */
+  }
+
+  .description {
+    font-size: 1.2rem; /* Ukuran font untuk layar ponsel */
+    margin: 10px 20px; /* Penyesuaian margin untuk teks deskripsi */
+  }
+
+  .button button {
+    font-size: 1rem; /* Ukuran font tombol untuk layar ponsel */
+    padding: 12px 25px; /* Penyesuaian padding untuk tombol pada layar ponsel */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .greetings {
+    font-size: 1.1rem; /* Ukuran font untuk layar ponsel lebih kecil */
+  }
+
+  .vienna {
+    font-size: 1rem; /* Ukuran font untuk layar ponsel lebih kecil */
+  }
+
+  .description {
+    font-size: 1rem; /* Ukuran font untuk layar ponsel lebih kecil */
+    margin: 5px 10px; /* Penyesuaian margin untuk teks deskripsi pada layar ponsel lebih kecil */
+  }
+
+  .button button {
+    font-size: 0.8rem; /* Ukuran font tombol untuk layar ponsel lebih kecil */
+    padding: 10px 20px; /* Penyesuaian padding untuk tombol pada layar ponsel lebih kecil */
+  }
+}
