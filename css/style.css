@@ -209,24 +209,38 @@ body {
 }
 
 .description {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Increased font size */
   margin: 20px 0;
   text-align: center;
-  color: black; /* Change the text color from white to black */
+  color: black; /* Text color */
   opacity: 0;
-  animation: fadeIn 3s ease-in-out forwards;
+  animation: fadeIn 3s ease-in-out forwards, bounce 2s ease-in-out infinite; /* Added bounce animation */
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(
-      20px
-    ); /* Adding a slight movement to make the animation more noticeable */
+    transform: translateY(20px); /* Adding a slight movement */
   }
   100% {
     opacity: 1;
     transform: translateY(0); /* Ending the animation with no movement */
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
   }
 }
 
