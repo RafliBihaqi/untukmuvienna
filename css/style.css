@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(https://images.unsplash.com/photo-1611832822637-0d6246524c50?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-image: url("https://images.pexels.com/photos/207962/pexels-photo-207962.jpeg");
   background-size: cover; /* Menutupi seluruh area body */
   background-position: center center; /* Posisi gambar di tengah-tengah */
   overflow: hidden;
@@ -212,8 +212,22 @@ body {
   font-size: 1.5rem;
   margin: 20px 0;
   text-align: center;
+  color: black; /* Change the text color from white to black */
   opacity: 0;
   animation: fadeIn 3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(
+      20px
+    ); /* Adding a slight movement to make the animation more noticeable */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ending the animation with no movement */
+  }
 }
 
 .button {
