@@ -13,13 +13,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://images.pexels.com/photos/207962/pexels-photo-207962.jpeg");
-  background-size: cover; /* Menutupi seluruh area body */
-  background-position: center center; /* Posisi gambar di tengah-tengah */
+  background: linear-gradient(
+    135deg,
+    #6b73ff,
+    #000dff
+  ); /* Latar belakang gradien */
+  background-size: cover;
+  background-position: center center;
   overflow: hidden;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .greetings {
@@ -29,7 +32,7 @@ body {
   justify-content: center;
   text-transform: uppercase;
   position: relative;
-  margin-top: 20px; /* Tambahkan margin atas untuk menjaga jarak dari atas */
+  margin-top: 20px;
 }
 
 .greetings > span {
@@ -37,17 +40,6 @@ body {
   display: inline-block;
   margin: 0 5px;
   position: relative;
-}
-
-.greetings > span:before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #39c6d6;
-  z-index: -1;
-  overflow: hidden;
-  animation: flicker 2s infinite;
 }
 
 @keyframes glow {
@@ -147,16 +139,6 @@ body {
   animation-delay: 4.2s;
 }
 
-@keyframes flicker {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-20px);
-  }
-}
-
 .vienna {
   font-size: 3rem;
   font-weight: 900;
@@ -173,19 +155,8 @@ body {
   position: relative;
 }
 
-.vienna > span:before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #39c6d6;
-  z-index: -1;
-  overflow: hidden;
-  animation: flicker 2s infinite;
-}
-
 .vienna > span:nth-child(1) {
-  animation-delay: 3.2s; /* Mulai animasi setelah span ke-16 dari greetings */
+  animation-delay: 3.2s;
 }
 
 .vienna > span:nth-child(2) {
@@ -209,22 +180,22 @@ body {
 }
 
 .description {
-  font-size: 2rem; /* Increased font size */
+  font-size: 2rem;
   margin: 20px 0;
   text-align: center;
-  color: black; /* Text color */
+  color: white;
   opacity: 0;
-  animation: fadeIn 3s ease-in-out forwards, bounce 2s ease-in-out infinite; /* Added bounce animation */
+  animation: fadeIn 3s ease-in-out forwards, bounce 2s ease-in-out infinite;
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(20px); /* Adding a slight movement */
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0); /* Ending the animation with no movement */
+    transform: translateY(0);
   }
 }
 
@@ -275,63 +246,52 @@ body {
   height: 100%;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .greetings {
-    font-size: 5rem; /* Ukuran font untuk layar tablet */
+    font-size: 5rem;
   }
 
   .vienna {
-    font-size: 2.5rem; /* Ukuran font untuk layar tablet */
+    font-size: 2.5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .greetings {
-    font-size: 4rem; /* Ukuran font untuk layar ponsel */
+    font-size: 4rem;
   }
 
   .vienna {
-    font-size: 2rem; /* Ukuran font untuk layar ponsel */
+    font-size: 2rem;
   }
 
   .description {
-    font-size: 1.2rem; /* Ukuran font untuk layar ponsel */
-    margin: 10px 20px; /* Penyesuaian margin untuk teks deskripsi */
+    font-size: 1.2rem;
+    margin: 10px 20px;
   }
 
   .button button {
-    font-size: 1rem; /* Ukuran font tombol untuk layar ponsel */
-    padding: 12px 25px; /* Penyesuaian padding untuk tombol pada layar ponsel */
+    font-size: 1rem;
+    padding: 12px 25px;
   }
 }
 
 @media screen and (max-width: 576px) {
   .greetings {
-    font-size: 1.1rem; /* Ukuran font untuk layar ponsel lebih kecil */
+    font-size: 1.1rem;
   }
 
   .vienna {
-    font-size: 1rem; /* Ukuran font untuk layar ponsel lebih kecil */
+    font-size: 1rem;
   }
 
   .description {
-    font-size: 1rem; /* Ukuran font untuk layar ponsel lebih kecil */
-    margin: 5px 10px; /* Penyesuaian margin untuk teks deskripsi pada layar ponsel lebih kecil */
+    font-size: 1rem;
+    margin: 5px 10px;
   }
 
   .button button {
-    font-size: 0.8rem; /* Ukuran font tombol untuk layar ponsel lebih kecil */
-    padding: 10px 20px; /* Penyesuaian padding untuk tombol pada layar ponsel lebih kecil */
+    font-size: 0.8rem;
+    padding: 10px 20px;
   }
 }
